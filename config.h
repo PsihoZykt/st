@@ -8,7 +8,8 @@
  static char *font = "FiraCode Nerd Font:size=12"; 
 #if FONT2_PATCH
 /* Spare fonts */
-static char *font2[] = {
+
+ static char *font2[] = {
   	"Hack Regular Nerd Font Mono:pixelsize=11:antialias=true:autohint=true", 
   "Noto Color Emoji:pixelsize=12:antialias=true:autohint=true"
 /*	"Inconsolata for Powerline:pixelsize=12:antialias=true:autohint=true", */
