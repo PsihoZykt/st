@@ -407,7 +407,7 @@ static Shortcut shortcuts[] = {
 	/* mask                 keysym          function         argument */
 	{ Mod1Mask,          XK_e,              sendbreak,       SHCMD("st -e nvim")}, // Without this, ctrl+e opens some temp file, i don't need it
 	{ XK_ANY_MOD,           XK_Break,       sendbreak,       {.i =  0} },
-	{ ControlMask,          XK_Print,       toggleprinter,   {.i =  0} },
+	{ ControlMask,          XK_Print,       toggleprinter,   {.i =  -2} },
 	{ ShiftMask,            XK_Print,       printscreen,     {.i =  0} },
 	{ XK_ANY_MOD,           XK_Print,       printsel,        {.i =  0} },
 	{ TERMMOD,              XK_Prior,       zoom,            {.f = +1} },
@@ -418,8 +418,8 @@ static Shortcut shortcuts[] = {
 	{ MODKEY,              XK_c,           clipcopy,       {.i =  0} },
 	{ MODKEY,              XK_v,           clippaste,       {.i =  0} },
 	#if SCROLLBACK_PATCH
-	{ ShiftMask,            XK_Page_Up,     kscrollup,       {.i = -1} },
-	{ ShiftMask,            XK_Page_Down,   kscrolldown,     {.i = -1} },
+	{ MODKEY,            XK_k,     kscrollup,       {.i = -1} },
+	{ MODKEY,            XK_j,   kscrolldown,     {.i = -1} },
 	#endif // SCROLLBACK_PATCH
 	#if CLIPBOARD_PATCH
 	{ TERMMOD,              XK_Y,           clippaste,       {.i =  0} },
